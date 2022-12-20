@@ -1,3 +1,0 @@
-#! /bin/sh
-cd turing
-python3 RUN.py
