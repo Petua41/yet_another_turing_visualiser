@@ -16,4 +16,5 @@ Yet another Turing visualiser -- это эмулятор машины Тьюри
   To launch emulator on Windows you should click on **Emulator_windows**
 #### Linux
   To launch emulator on Linux you should click on **Emulator_linux** file or execute `./Emulator_linux`
+  
 Also, you can go into folder *turing* and run file **RUN.py** (execute `python RUN.py` on Windows or `python3 RUN.py` on Linux)
