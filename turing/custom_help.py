@@ -20,9 +20,6 @@ from collections import deque
 from webbrowser import open_new
 from sys import platform
 
-if platform.startswith('win'):
-    from os import startfile
-    
 try:
     from ttkthemes import ThemedTk
 except (ModuleNotFoundError, ImportError):
@@ -37,13 +34,6 @@ class About():
         self.root.attributes('-topmost', True)
         self.root.attributes('-alpha', 0.95)
         self.root.resizable(False, False)
-
-        if platform.startswith('win'):
-            self.platform = 'win'
-        elif platform.startswith('linux'):
-            self.platform = 'linux'
-        else:
-            self.platform = 'other'
 
         self.program_name = ttk.Label(self.root, text='Yet another Turing visualiser')
         self.program_name.grid(row=0, column=0, pady=15, padx=10)
@@ -86,10 +76,7 @@ class About():
         open_new('https://t.me/petua41')
 
     def open_license(self, *args):
-        if self.platform == 'win':
-            startfile(r'COPYING.htm')
-        else:
-            open_new('https://www.gnu.org/licenses/gpl-3.0.html')
+        open_new('https://www.gnu.org/licenses/gpl-3.0.html')
 
 class Help():
     def __init__(self, theme='breeze'):
