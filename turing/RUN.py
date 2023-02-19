@@ -28,13 +28,6 @@ You`d better install it with
 
 And if your Python version lower than 3.10, you MUST update Python to use Emulator.''')
 
-if ver[0] != '3' or int(ver[1]) < 10:
-    print('''ERROR
-Python 3.10 or higher required.
-Please, update Python.''')
-    input()
-    exit()
-
 try:
     from tkinter import ttk
 except (ImportError, ModuleNotFoundError):
@@ -81,7 +74,7 @@ Maybe you don`t have python in PATH''')
                 print(f'{name} installed successfully')
                 return True
         elif system.startswith('linux'):
-            err_code = os.system(f'pip install {name}')
+            err_code = os.system(f'python3 -m pip install {name}')
             if err_code:
                 print(f'''ERROR
 Installation failed.
@@ -144,7 +137,7 @@ Maybe you don`t have python in PATH''')
             else:
                 print(f'Pillow upgraded successfully')
         elif system.startswith('linux'):
-            err_code = os.system(f'pip install --upgrade Pillow')
+            err_code = os.system(f'python3 -m pip install --upgrade Pillow')
             if err_code:
                 print(f'''ERROR
 Installation failed.

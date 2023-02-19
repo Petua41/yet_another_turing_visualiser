@@ -37,24 +37,23 @@ def stage2(s: str, finish_func):
     global i
     global curr_symbol
     
-    match s:
-        case '>':
-            if i < 1000:
-                i += 1
-            else:
-                finish_func(err_code=101, end='правый')
-                raise Exception()
-        case '<':
-            if i > 0:
-                i -= 1
-            else:
-                finish_func(err_code=101, end='левый')
-                raise Exception()
-        case '!':
-            end()
-        case _:
-            finish_func(err_code=102, unknown_symbol=s)
+    if s == '>':
+        if i < 1000:
+            i += 1
+        else:
+            finish_func(err_code=101, end='правый')
             raise Exception()
+    elif s == '<':
+        if i > 0:
+            i -= 1
+        else:
+            finish_func(err_code=101, end='левый')
+            raise Exception()
+    elif s == '!':
+        end()
+    elif s == _:
+        finish_func(err_code=102, unknown_symbol=s)
+        raise Exception()
     curr_symbol = mem[i]
 
 def stage3(s: str):

@@ -826,7 +826,7 @@ TODO: меняет self.root['theme'], на всякий проверяет ко
             messagebox.showerror(title='Ошибка интерпретатора',
                                      message='Начальная строка не помещается на ленту. Зачем тебе строка больше 1000 символов?', parent=parent)
                 
-        else:     # other
+        else_:     # other
            messagebox.showerror(title='Программа завершилась',
                                      message=str.format('Прогамма завершилась с кодом ошибки {0}. Мы не знаем, что это значит. Обратитесь в поддержку',
                                                         err_code), parent=parent)
