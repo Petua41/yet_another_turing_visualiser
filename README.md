@@ -19,6 +19,6 @@ Yet another Turing visualiser -- это эмулятор машины Тьюри
   
 Also, you can go into folder *turing* and run file **RUN.py** (execute `python RUN.py` on Windows or `python3 RUN.py` on Linux)
 
-## Старые версии Python ($\leq$ 3.9)       (***FIXME: здесь пока нет тега old_python***) 
-  Чтобы установить Yet another Turing Emulator на старой версии Python, вам нужно всего лишь переключиться на тег **old_python** (в верхнем левом углу этой страницы). 
+## Старые версии Python ($\leq$ 3.9)
+  Чтобы установить Yet another Turing Emulator на старой версии Python, вам нужно всего лишь переключиться на **old_python** в верхнем левом углу этой страницы. 
   Не волнуйтесь, он практически не отличается от версии для нового Python. Просто все конструкции `match...case` заменены на `if...elif...else` и убрана проверка версии Python. 
